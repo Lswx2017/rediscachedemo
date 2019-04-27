@@ -3,10 +3,13 @@ package com.jn.mapper;
 
 import com.jn.entity.User;
 import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.DeleteMapping;
 
 import java.util.List;
 
+@Repository
 @Mapper
 public interface UserMapper {
 

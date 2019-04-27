@@ -23,7 +23,7 @@ public class UserService {
         return userMapper.getUser();
     }
 
-    @Cacheable(key = "'userid:'+#id")
+    @Cacheable(key = "'userid:'+#id", unless = "#result==null")
     public User findU(Integer id) {
         System.out.println("查询数据库");
         return userMapper.getUserById(id);
